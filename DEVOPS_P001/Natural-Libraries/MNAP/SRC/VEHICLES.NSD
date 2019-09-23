@@ -1,0 +1,58 @@
+DB: 012 FILE: 012  - VEHICLES                         DEFAULT SEQUENCE:   
+TYPE: ADABAS
+ 
+T L DB Name                              F Leng  S D Remark
+- - -- --------------------------------  - ----  - - ------------------------
+*      >Natural Source Header 000000
+*      :CP
+*      
+*      
+*      :LineIncrement 10
+*      <Natural Source Header
+  1 AA REG-NUM                           A   15  N D LOCAL FORMAT
+*      LO AL FORMAT                                  
+*      CA 'S REGISTRATION NUMBER                     
+  1 AB CHASSIS-NUM                       B    4  F   NUMERIC
+*      NU ERIC                                       
+*      UN QUE MANIFACTURER NO FOR C                  
+  1 AC PERSONNEL-ID                      A    8    D INTERN.
+*      IN ERN.                                       
+*      ID NTIFIER OF CAR USER/OWNER                  
+G 1 CD CAR-DETAILS                                   LOCAL/GENERIC
+       HD=CAR DETAILS
+*      LO AL/GENERIC                                 
+*      DE CRIPTION OF THE CAR                        
+  2 AD MAKE                              A   20  N D LOCAL/GENERIC
+*      LO AL/GENERIC                                 
+*      NA E OF CAR MAKE/MANUFACTURE                  
+  2 AE MODEL                             A   20  N   LOCAL/GENERIC
+*      LO AL/GENERIC                                 
+*      NA E OF CAR MODEL                             
+  2 AF COLOR                             A   10  N D LOCAL/GENERIC
+*      LO AL/GENERIC                                 
+*      CA  MODEL'S COLOR NAME                        
+  2 AF COLOUR                            A   10  N D LOCAL/GENERIC
+*      LO AL/GENERIC                                 
+*      CA  MODEL'S COLOR NAME                        
+  1 AG YEAR                              N  4.0  N   INTERN.
+*      IN ERN.                                       
+*      YE R OF THE CAR'S MANUFACTUR                  
+  1 AH CLASS                             A    1  F D INTERN.
+*      IN ERN.                                       
+*      CO E FOR OWNERSHIP (P/C)                      
+  1 AI LEASE-PUR                         A    1  F   INTERN.
+*      IN ERN.                                       
+*      CO E HOW CAR WAS AQUIRED                      
+  1 AJ DATE-ACQ                          N  8.0  N   INTERN.
+*      IN ERN.                                       
+*      DA E WHEN CAR WAS ACQUIRED                    
+  1 AL CURR-CODE                         A    3  N   INTERN.
+*      IN ERN.                                       
+*      CU RENCY OF MAINTENANCE COST                  
+M 1 AM MAINT-COST                        P  7.0  N   INTERN.
+*      IN ERN.                                       
+*      MA NTENANCE COST IN CURR.UNI                  
+  1 AO MODEL-YEAR-MAKE                   A   24    S LOCAL/GENERIC
+*      LO AL/GENERIC                                 
+*      CA  MAKE + MODEL YEAR                         
+******DDM OUTPUT TERMINATED******

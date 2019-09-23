@@ -1,0 +1,97 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP ISO_8859-1:1987
+* :LineIncrement 10
+* <Natural Source Header
+DEFINE DATA LOCAL
+1 V1 VIEW OF EMPLOYEES
+  2 PERSONNEL-ID
+  2 NAME
+*
+1 V2 VIEW OF EMPLOYEES
+  2 CITY
+  2 SEX
+*
+1 V3 VIEW OF EMPLOYEES
+  2 DEPT
+1 V4 VIEW OF EMPLOYEES
+  2 INCOME (1:200)
+    3 SALARY
+    3 BONUS (5)
+1 V5 VIEW OF EMPLOYEES
+  2 INCOME (201:400)
+    3 SALARY
+    3 BONUS (5)
+
+*
+1 #I  (P5)
+1 #J  (P5)
+*
+END-DEFINE
+*
+** acessa 1 view
+*
+st01. read v1 by personnel-id = '90010106'
+NAME := 'NAPOLI'
+update (st01.)
+DISPLAY PERSONNEL-ID NAME *ISN (st01.)
+end-read
+*
+** acessa 2 view
+*
+G02. GET V2 *ISN (ST01.)
+CITY := 'CARAGUATATUBA'
+SEX  := 'M'
+*
+UPDATE (G02.)
+*
+** acessa 3 view
+*
+G03. GET V3 *ISN (ST01.)
+DEPT := 'SUPP05'
+*
+UPDATE (G03.)
+*
+** acessa 4 view
+*
+G04. GET V4 *ISN (ST01.)
+*
+FOR #I 1 TO 200  
+  FOR #J 1 TO 5
+    V4.SALARY(#I) :=  #I * 1000
+    V4.BONUS(#I,#J) := (#I * 100) + (#J * 10)
+  END-FOR
+END-FOR
+*
+UPDATE (G04.)
+*
+** acessa 5 view
+*
+G05. GET V5 *ISN (ST01.)
+*
+FOR #I 201 TO 400  
+  FOR #J 1 TO 5
+    V5.SALARY(#I) :=  #I * 1000
+    V5.BONUS(#I,#J) := (#I * 100) + (#J * 10)
+  END-FOR
+END-FOR
+*
+UPDATE (G05.)
+*
+END TRANSACTION
+*
+FOR #I 1 TO 200 
+  FOR #J 1 TO 5
+    WRITE 'SALARY ' #I ' - ' V4.SALARY(#I) ' - BONUS ' #J ' - ' V4.BONUS(#I,#J)
+  END-FOR
+END-FOR
+*
+FOR #I 201 TO 400  
+  FOR #J 1 TO 5
+    WRITE 'SALARY ' #I ' - ' V5.SALARY(#I) ' - BONUS ' #J ' - ' V5.BONUS(#I,#J)
+  END-FOR
+END-FOR
+
+
+END
+

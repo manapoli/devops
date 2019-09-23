@@ -1,0 +1,23 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP
+* <Natural Source Header
+/** New Program PGM3002.
+/**
+/** :author mnap
+/** Date: 2019/09/13
+/* TODO Enter your code here
+DEFINE DATA LOCAL
+1 EMPL VIEW OF EMPLOYEES
+  2 PERSONNEL-ID
+  2 NAME
+  2 DEPT
+  2 DEPT-PERSON
+  2 BIRTH
+END-DEFINE
+*
+READ EMPL BY DEPT-PERSON
+    STARTING FROM "SALE20" TO "SALE21"
+  DISPLAY PERSONNEL-ID DEPT NAME BIRTH DEPT-PERSON
+END-READ
+END
