@@ -1,0 +1,24 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP
+* <Natural Source Header
+/** New Program TESTE05.
+/**
+/** :author mnap
+/* TODO Enter your code here
+DEFINE DATA LOCAL   
+1 PAT VIEW OF PATIENT
+  2 PATIENT-ID
+  2 FIRST-NAME
+  2 SURNAME
+END-DEFINE
+*
+READ PAT
+DISPLAY 
+   PATIENT-ID
+   FIRST-NAME
+   SURNAME
+END-READ
+END
+
+END

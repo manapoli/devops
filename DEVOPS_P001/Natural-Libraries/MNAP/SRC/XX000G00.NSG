@@ -1,0 +1,12 @@
+DEFINE DATA GLOBAL
+/* >Natural Source Header 000000
+/* :Mode S
+/* :CP
+/* <Natural Source Header
+/** New Global Data Area XX000G00.
+/**
+/** :author mnap
+/* TODO Enter your data definitions here
+ 1 #G-SELECTED-OPTION (A1)
+ 1 #G-MESSAGE (A70)
+END-DEFINE

@@ -1,0 +1,12 @@
+DEFINE DATA LOCAL
+/* >Natural Source Header 000000
+/* :Mode S
+/* :CP
+/* <Natural Source Header
+/** New Local Data Area XX001L01.
+/**
+/** :author mnap
+/* TODO Enter your data definitions here
+ 1 #M-OPTION (A1)
+ 1 #L-MESSAGE (A70) /* Message at bottom of Screen
+END-DEFINE
