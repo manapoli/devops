@@ -1,5 +1,5 @@
 * >Natural Source Header 000000
-* :Mode R
+* :Mode S
 * :CP
 * <Natural Source Header
 /** New Program XX001P01.
@@ -35,5 +35,4 @@ NONE VALUE
 END-DECIDE
 *
 END-REPEAT
-END
 END

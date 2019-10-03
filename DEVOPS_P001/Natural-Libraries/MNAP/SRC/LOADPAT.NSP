@@ -1,5 +1,5 @@
 * >Natural Source Header 000000
-* :Mode R
+* :Mode S
 * :CP
 * <Natural Source Header
 /** New Program LOADPAT.
@@ -46,11 +46,7 @@ READ EMP BY PERSONNEL-ID
   END-FOR
   STORE PAT
   ADD 1 TO #GRAV
-* END TRANSACTION
+  END TRANSACTION
 END-READ
 WRITE 'TOTAL GRAVADOS:' #GRAV
-END
-
-
-
 END
